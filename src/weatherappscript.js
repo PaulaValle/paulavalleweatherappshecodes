@@ -88,7 +88,6 @@ function currentPlace(position) {
   axios.get(apiUrlCurrent).then(show);
 }
 function getPlace() {
-  alert("Allow us to know your location so we can work");
   navigator.geolocation.getCurrentPosition(currentPlace);
 }
 let currentButton = document.querySelector(".currentbutton");
