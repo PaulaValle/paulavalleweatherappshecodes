@@ -1,0 +1,206 @@
+@media screen {
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+div {
+  margin: 10px 0 0 0;
+}
+
+section {
+  display: inline-flex;
+}
+
+strong.highlight {
+  font-size: x-large;
+}
+footer {
+  font-size: 11px;
+  font-family: "PT Mono", monospace;
+  text-align: center;
+  margin-top: 10px;
+  opacity: 0.6;
+}
+.container {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 80%;
+  border: 1px solid #817b7b;
+  border-radius: 4px;
+  box-shadow: 1px 2px 3px #b8b1b188;
+  max-width: 720px;
+  padding: 10px;
+}
+.searchbar {
+  display: inline;
+  width: 65%;
+  padding: 6px 0 6px 6px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  box-shadow: 1px 2px 3px grey;
+  margin-right: 5px;
+  margin-left: 1%;
+}
+.searchbutton {
+  padding: 9px 0 9px 6px;
+  font-size: 13px;
+  font-weight: 400;
+  background-color: #9a45d6;
+  color: #fff;
+  border: 1px solid #6e24a3;
+  border-radius: 4px;
+  box-shadow: 1px 2px 3px grey;
+  transition: all 150ms ease-in-out;
+  width: 15%;
+}
+.searchbutton:hover {
+  padding: 9px 0 9px 6px;
+  font-size: 13px;
+  font-weight: 400;
+  background-color: #d6b2f0;
+  color: #000000;
+  border: 1px solid #6e24a3;
+  box-shadow: 1px 2px 3px grey;
+  border-radius: 4px;
+}
+.currentbutton {
+  padding: 9px 0 9px 6px;
+  font-size: 13px;
+  font-weight: 400;
+  background-color: #36aa27;
+  color: #fff;
+  border: 1px solid #115a08;
+  border-radius: 4px;
+  box-shadow: 1px 2px 3px grey;
+  transition: all 150ms ease-in-out;
+  width: 15%;
+}
+.currentbutton:hover {
+  padding: 9px 0 9px 6px;
+  font-size: 13px;
+  font-weight: 400;
+  background-color: #9ce093;
+  color: #000000;
+  border: 1px solid #36aa27;
+  box-shadow: 1px 2px 3px grey;
+  border-radius: 4px;
+}
+.celsius {
+  padding: 6px 4px;
+  margin-right: 5px;
+  margin-left: 1%;
+  width: 10%;
+  background-color: #db5902;
+  color: #fff;
+  border: 1px solid #6b2b01;
+  border-radius: 4px;
+  box-shadow: 1px 2px 3px grey;
+  transition: all 150ms ease-in-out;
+}
+.celsius:hover {
+  padding: 6px 4px;
+  margin-right: 5px;
+  margin-left: 1%;
+  width: 10%;
+  background-color: #ffbf94;
+  color: #000000;
+  border: 1px solid #6b2b01;
+  box-shadow: 1px 2px 3px grey;
+  border-radius: 4px;
+}
+.celsius:focus {
+  padding: 6px 4px;
+  margin-right: 5px;
+  margin-left: 1%;
+  width: 10%;
+  background-color: #fff;
+  color: #6b2b01;
+  font-size: bolder;
+  border: 1px solid #db5902;
+  box-shadow: 1px 2px 3px grey;
+  border-radius: 4px;
+}
+.farenheit {
+  padding: 6px 4px;
+  margin-right: 5px;
+  width: 10%;
+  background-color: #db5902;
+  color: #fff;
+  border: 1px solid #6b2b01;
+  border-radius: 4px;
+  box-shadow: 1px 2px 3px grey;
+  transition: all 150ms ease-in-out;
+}
+.farenheit:hover {
+  padding: 6px 4px;
+  margin-right: 5px;
+  width: 10%;
+  background-color: #ffbf94;
+  color: #000000;
+  border: 1px solid #6b2b01;
+  box-shadow: 1px 2px 3px grey;
+  border-radius: 4px;
+}
+.farenheit:focus {
+  padding: 6px 4px;
+  margin-right: 5px;
+  width: 10%;
+  background-color: #fff;
+  color: #6b2b01;
+  font-size: bolder;
+  border: 1px solid #db5902;
+  box-shadow: 1px 2px 3px grey;
+  border-radius: 4px;
+}
+.firstgradeinfo {
+  margin-left: 10%;
+}
+#city {
+  text-transform: capitalize;
+}
+.smaller {
+  font-size: small;
+  opacity: 0.7;
+}
+.temperature {
+  text-align: center;
+  margin-left: 14%;
+}
+.todaytemperature {
+  font-size: 25px;
+}
+.averagetemperature {
+  font-size: small;
+  font-family: "PT Mono", monospace;
+}
+.todayicon {
+  position: relative;
+  margin-top: -50px;
+  font-size: 40px;
+  top: 20px;
+  right: -70px;
+}
+#average-temperature-bold {
+  font-weight: bold;
+}
+#littlecontainer {
+  display: inline-flex;
+  border: 1px solid #cfb7b7a2;
+  box-shadow: 1px 2px 3px #b8b1b188;
+  border-radius: 4px;
+  padding: 5px 8px;
+  text-align: center;
+  margin-left: 0.6%;
+  width: 12.85%;
+}
+#spacing {
+  display: block;
+  margin: 10px 1%;
+}

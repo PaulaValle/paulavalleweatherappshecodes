@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paula Valle _ Weather App</title>
+    <link rel="stylesheet" href="src/weatherappstyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <!-- contenedor -->
+    <div class="container">
+      <!-- barra de búsqueda -->
+      <form id="search-bar">
+        <input
+          type="text"
+          placeholder="Search a city"
+          class="searchbar col-7"
+          id="search-city-input"
+        />
+        <input type="submit" value="Search" class="searchbutton col-2" />
+        <input type="button" value="Current" class="currentbutton col-2" />
+      </form>
+      <!-- botones grados -->
+      <div>
+        <button class="celsius" id="celsius-button" autofocus>Cº</button>
+        <button class="farenheit" id="farenheit-button">Fº</button>
+      </div>
+      <!-- información 1º grado -->
+      <div>
+        <section class="firstgradeinfo">
+          <p>
+            <strong class="highlight"><span id="city">Granada</span> </strong>
+            <br />
+            <span id="date-month"> Monday (i), Monthday </span>
+            <br />
+            <span class="smaller" id="second-grade-info"> Other info </span>
+          </p>
+        </section>
+        <section class="firstgradeinfo temperature">
+          <p>
+            <span class="todaytemperature" id="today-temperature">20º</span>
+            <br />
+            <span class="averagetemperature" id="average-temperature">
+              5º/ 25º</span
+            >
+          </p>
+        </section>
+        <section class="todayicon firstgradeinfo" id="big-icon">🌞</section>
+      </div>
+      <!-- separación -->
+      <hr />
+      <!-- días de la semana -->
+      <div id="spacing">
+        <section id="littlecontainer" class="weekdays">
+          <p>
+            Weekday
+            <br />
+            <span> 🌞 </span>
+            <br />
+            5º/ 25º
+          </p>
+        </section>
+        <section id="littlecontainer">
+          <p>
+            Weekday
+            <br />
+            <span> 🌞 </span>
+            <br />
+            5º/ 25º
+          </p>
+        </section>
+        <section id="littlecontainer">
+          <p>
+            Weekday
+            <br />
+            <span> 🌞 </span>
+            <br />
+            5º/ 25º
+          </p>
+        </section>
+        <section id="littlecontainer">
+          <p>
+            Weekday
+            <br />
+            <span> 🌞 </span>
+            <br />
+            5º/ 25º
+          </p>
+        </section>
+        <section id="littlecontainer">
+          <p>
+            Weekday
+            <br />
+            <span> 🌞 </span>
+            <br />
+            5º/ 25º
+          </p>
+        </section>
+        <section id="littlecontainer">
+          <p>
+            Weekday
+            <br />
+            <span> 🌞 </span>
+            <br />
+            5º/ 25º
+          </p>
+        </section>
+      </div>
+      <footer>
+        Coded by
+        <a
+          href="https://es.linkedin.com/in/paula-valle-romero-a8869a184"
+          target="_blank"
+        >
+          Paula Valle
+        </a>
+      </footer>
+    </div>
+    <script src="src/weatherappscript.js"></script>
+  </body>
+</html>
