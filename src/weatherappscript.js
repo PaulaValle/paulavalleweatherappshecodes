@@ -57,7 +57,7 @@ function temperatureChange(response) {
   let temperatureMin = Math.round(response.data.main.temp_min);
   let temperatureMax = Math.round(response.data.main.temp_max);
   todayTemperature.innerHTML = `${temperature}º`;
-  averageTemperature.innerHTML = `${temperatureMin}º/ ${temperatureMax}º`;
+  averageTemperature.innerHTML = `${temperatureMin}º/ <strong>${temperatureMax}º</strong>`;
 }
 
 function cityChange(event) {
@@ -77,7 +77,7 @@ function show(response) {
   let temperatureMin = Math.round(response.data.main.temp_min);
   let temperatureMax = Math.round(response.data.main.temp_max);
   todayTemperature.innerHTML = `${temperature}º`;
-  averageTemperature.innerHTML = `${temperatureMin}º/ ${temperatureMax}º`;
+  averageTemperature.innerHTML = `${temperatureMin}º/ <strong>${temperatureMax}º</strong>`;
   city.innerHTML = `${response.data.name}`;
 }
 function currentPlace(position) {

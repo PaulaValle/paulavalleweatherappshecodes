@@ -25,16 +25,17 @@ footer {
   display: block;
   margin: 0 auto;
   margin-top: 10px;
-  width: 80%;
-  border: 1px solid #817b7b;
+  width: 60%;
+  background-color: #ffe9e3;
+  border: 1px solid #a2a8d3;
   border-radius: 4px;
-  box-shadow: 1px 2px 3px #b8b1b188;
-  max-width: 720px;
+  box-shadow: 1px 2px 5px #9591be;
+  max-width: 435px;
   padding: 10px;
 }
 .searchbar {
   display: inline;
-  width: 65%;
+  width: 63%;
   padding: 6px 0 6px 6px;
   font-size: 15px;
   font-weight: 400;
@@ -42,54 +43,54 @@ footer {
   color: #212529;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid #a2a8d3;
   border-radius: 0.25rem;
-  box-shadow: 1px 2px 3px grey;
+  box-shadow: 1px 2px 4px #a08c8c;
   margin-right: 5px;
   margin-left: 1%;
 }
 .searchbutton {
-  padding: 9px 0 9px 6px;
+  padding: 9px 0 9px 1px;
   font-size: 13px;
   font-weight: 400;
-  background-color: #9a45d6;
+  background-color: #7c73e6;
   color: #fff;
-  border: 1px solid #6e24a3;
+  border: 1px solid #523ff5;
   border-radius: 4px;
-  box-shadow: 1px 2px 3px grey;
+  box-shadow: 1px 2px 4px #a08c8c;
   transition: all 150ms ease-in-out;
   width: 15%;
 }
 .searchbutton:hover {
-  padding: 9px 0 9px 6px;
+  padding: 9px 0 9px 1px;
   font-size: 13px;
   font-weight: 400;
-  background-color: #d6b2f0;
+  background-color: #c4c1e0;
   color: #000000;
-  border: 1px solid #6e24a3;
-  box-shadow: 1px 2px 3px grey;
+  border: 1px solid #7c73e6;
+  box-shadow: 1px 2px 4px #a08c8c;
   border-radius: 4px;
 }
 .currentbutton {
-  padding: 9px 0 9px 6px;
+  padding: 9px 0 9px 1px;
   font-size: 13px;
   font-weight: 400;
   background-color: #36aa27;
   color: #fff;
   border: 1px solid #115a08;
   border-radius: 4px;
-  box-shadow: 1px 2px 3px grey;
+  box-shadow: 1px 2px 4px #a08c8c;
   transition: all 150ms ease-in-out;
   width: 15%;
 }
 .currentbutton:hover {
-  padding: 9px 0 9px 6px;
+  padding: 9px 0 9px 1px;
   font-size: 13px;
   font-weight: 400;
   background-color: #9ce093;
   color: #000000;
   border: 1px solid #36aa27;
-  box-shadow: 1px 2px 3px grey;
+  box-shadow: 1px 2px 4px #a08c8c;
   border-radius: 4px;
 }
 .celsius {
@@ -98,11 +99,12 @@ footer {
   margin-left: 1%;
   width: 10%;
   background-color: #db5902;
-  color: #fff;
+  color: #fafafa;
   border: 1px solid #6b2b01;
   border-radius: 4px;
   box-shadow: 1px 2px 3px grey;
   transition: all 150ms ease-in-out;
+  margin-bottom: -10px;
 }
 .celsius:hover {
   padding: 6px 4px;
@@ -114,29 +116,32 @@ footer {
   border: 1px solid #6b2b01;
   box-shadow: 1px 2px 3px grey;
   border-radius: 4px;
+  margin-bottom: -10px;
 }
 .celsius:focus {
   padding: 6px 4px;
   margin-right: 5px;
   margin-left: 1%;
   width: 10%;
-  background-color: #fff;
+  background-color: #fafafa;
   color: #6b2b01;
   font-size: bolder;
   border: 1px solid #db5902;
   box-shadow: 1px 2px 3px grey;
   border-radius: 4px;
+  margin-bottom: -10px;
 }
 .farenheit {
   padding: 6px 4px;
   margin-right: 5px;
   width: 10%;
   background-color: #db5902;
-  color: #fff;
+  color: #fafafa;
   border: 1px solid #6b2b01;
   border-radius: 4px;
   box-shadow: 1px 2px 3px grey;
   transition: all 150ms ease-in-out;
+  margin-bottom: -10px;
 }
 .farenheit:hover {
   padding: 6px 4px;
@@ -147,20 +152,22 @@ footer {
   border: 1px solid #6b2b01;
   box-shadow: 1px 2px 3px grey;
   border-radius: 4px;
+  margin-bottom: -10px;
 }
 .farenheit:focus {
   padding: 6px 4px;
   margin-right: 5px;
   width: 10%;
-  background-color: #fff;
+  background-color: #fafafa;
   color: #6b2b01;
   font-size: bolder;
   border: 1px solid #db5902;
   box-shadow: 1px 2px 3px grey;
   border-radius: 4px;
+  margin-bottom: -10px;
 }
 .firstgradeinfo {
-  margin-left: 10%;
+  margin-left: 10px;
 }
 #city {
   text-transform: capitalize;
@@ -169,36 +176,51 @@ footer {
   font-size: small;
   opacity: 0.7;
 }
+.positionInfo {
+  width: 35%;
+  position: relative;
+  top: -20px;
+}
 .temperature {
   text-align: center;
-  margin-left: 14%;
+  margin-left: 25px;
+  width: 20%;
 }
 .todaytemperature {
-  font-size: 25px;
+  position: relative;
+  top: -10px;
+  font-size: 35px;
 }
 .averagetemperature {
-  font-size: small;
+  position: relative;
+  top: -10px;
+  font-size: 15px;
   font-family: "PT Mono", monospace;
 }
 .todayicon {
   position: relative;
-  margin-top: -50px;
-  font-size: 40px;
-  top: 20px;
-  right: -70px;
+  font-size: 50px;
+  left: 20px;
+  top: 5px;
+  width: 15%;
 }
 #average-temperature-bold {
   font-weight: bold;
 }
 #littlecontainer {
   display: inline-flex;
-  border: 1px solid #cfb7b7a2;
-  box-shadow: 1px 2px 3px #b8b1b188;
+  background-color: #f7ccc0;
+  border: 1px solid #f8c6b8;
+  box-shadow: 1px 2px 5px #a2a8d3;
   border-radius: 4px;
   padding: 5px 8px;
   text-align: center;
   margin-left: 0.6%;
-  width: 12.85%;
+  width: 19.2%;
+  margin-bottom: -5px;
+}
+.spacing {
+  margin-top: -20px;
 }
 #spacing {
   display: block;
