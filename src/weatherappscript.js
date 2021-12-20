@@ -65,6 +65,7 @@ function temperatureChange(response) {
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  icon.setAttribute("alt", `${response.data.weather[0].main}`);
 }
 function cityChange(event) {
   event.preventDefault();
@@ -92,6 +93,7 @@ function show(response) {
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  icon.setAttribute("alt", `${response.data.weather[0].main}`);
 }
 function currentPlace(position) {
   let latitude = position.coords.latitude;
