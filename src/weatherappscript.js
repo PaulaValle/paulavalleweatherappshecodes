@@ -60,6 +60,11 @@ function temperatureChange(response) {
   averageTemperature.innerHTML = `${temperatureMin}º/ <strong>${temperatureMax}º</strong>`;
   let otherInfo = document.querySelector("#description");
   otherInfo.innerHTML = `${response.data.weather[0].main}`;
+  let icon = document.querySelector("#big-icon");
+  icon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 function cityChange(event) {
   event.preventDefault();
@@ -82,6 +87,11 @@ function show(response) {
   city.innerHTML = `${response.data.name}`;
   let otherInfo = document.querySelector("#description");
   otherInfo.innerHTML = `${response.data.weather[0].main}`;
+  let icon = document.querySelector("#big-icon");
+  icon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 function currentPlace(position) {
   let latitude = position.coords.latitude;
