@@ -58,8 +58,9 @@ function temperatureChange(response) {
   let temperatureMax = Math.round(response.data.main.temp_max);
   todayTemperature.innerHTML = `${temperature}º`;
   averageTemperature.innerHTML = `${temperatureMin}º/ <strong>${temperatureMax}º</strong>`;
+  let otherInfo = document.querySelector("#description");
+  otherInfo.innerHTML = `${response.data.weather[0].main}`;
 }
-
 function cityChange(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-city-input");
@@ -79,6 +80,8 @@ function show(response) {
   todayTemperature.innerHTML = `${temperature}º`;
   averageTemperature.innerHTML = `${temperatureMin}º/ <strong>${temperatureMax}º</strong>`;
   city.innerHTML = `${response.data.name}`;
+  let otherInfo = document.querySelector("#description");
+  otherInfo.innerHTML = `${response.data.weather[0].main}`;
 }
 function currentPlace(position) {
   let latitude = position.coords.latitude;
