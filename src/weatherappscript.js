@@ -67,12 +67,11 @@ let searchBar = document.querySelector("#search-bar");
 searchBar.addEventListener("submit", cityChange);
 //* search engine current
 function show(response) {
-  let temperature = Math.round(response.data.main.temp);
-  let temperatureMin = Math.round(response.data.main.temp_min);
-  let temperatureMax = Math.round(response.data.main.temp_max);
   celsiusTemperature = Math.round(response.data.main.temp);
-  todayTemperature.innerHTML = `${temperature}º`;
-  averageTemperature.innerHTML = `${temperatureMin}º/ <strong>${temperatureMax}º</strong>`;
+  celsiusAverageMin = Math.round(response.data.main.temp_min);
+  celsiusAverageMax = Math.round(response.data.main.temp_max);
+  todayTemperature.innerHTML = `${celsiusTemperature}º`;
+  averageTemperature.innerHTML = `${celsiusAverageMin}º/ <strong>${celsiusAverageMax}º</strong>`;
   city.innerHTML = `${response.data.name}`;
   let otherInfo = document.querySelector("#description");
   otherInfo.innerHTML = `${response.data.weather[0].main}`;
@@ -108,12 +107,16 @@ function celsius(event) {
 }
 function farenheit(event) {
   event.preventDefault();
-  let farenheitTempToday = `(${celsiusTemperature} * 9 / 5) + 32`;
-  let farenheitTempAverageMin = `(${celsiusAverageMin} * 9 / 5) + 32`;
-  let farenheitTempAverageMax = `(${celsiusAverageMax} * 9 / 5) + 32`;
+  let farenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+  let farenheitTempAverageMin = (celsiusAverageMin * 9) / 5 + 32;
+  let farenheitTempAverageMax = (celsiusAverageMax * 9) / 5 + 32;
+  farenheitTemp = Math.round(farenheitTemp);
+  let farenheitTempToday = `${farenheitTemp}º`;
+  farenheitTempAverageMin = Math.round(farenheitTempAverageMin);
+  farenheitTempAverageMax = Math.round(farenheitTempAverageMax);
   let farenheitTempAverage = `${farenheitTempAverageMin}º / <strong>${farenheitTempAverageMax}º</strong>`;
-  todayTemperature.innerHTML = Math.round(farenheitTempToday);
-  averageTemperature.innerHTML = Math.round(farenheitTempAverage);
+  todayTemperature.innerHTML = farenheitTempToday;
+  averageTemperature.innerHTML = farenheitTempAverage;
   celsiusButton.classList.remove("active");
   farenheitButton.classList.add("active");
 }
