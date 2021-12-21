@@ -1,4 +1,3 @@
-let bigIcon = document.querySelector("#big-icon");
 let apiKey = "2f1b841a3b6dc609cb8924e01b3900c6";
 // new Date
 let otherInfo = document.querySelector("#second-grade-info");
@@ -47,6 +46,9 @@ function temperatureChange(response) {
   averageTemperature.innerHTML = `${temperatureMin}º/ <strong>${temperatureMax}º</strong>`;
   let otherInfo = document.querySelector("#description");
   otherInfo.innerHTML = `${response.data.weather[0].main}`;
+  let wind = document.querySelector("#wind");
+  let windInfo = Math.round(response.data.wind.speed);
+  wind.innerHTML = `${windInfo} km/h`;
   let icon = document.querySelector("#big-icon");
   icon.setAttribute(
     "src",
@@ -73,6 +75,8 @@ function show(response) {
   todayTemperature.innerHTML = `${celsiusTemperature}º`;
   averageTemperature.innerHTML = `${celsiusAverageMin}º/ <strong>${celsiusAverageMax}º</strong>`;
   city.innerHTML = `${response.data.name}`;
+  let windInfo = document.querySelector("#wind");
+  windInfo.innerHTML = `${response.data.wind.speed}`;
   let otherInfo = document.querySelector("#description");
   otherInfo.innerHTML = `${response.data.weather[0].main}`;
   let icon = document.querySelector("#big-icon");
