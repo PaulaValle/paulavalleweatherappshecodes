@@ -132,3 +132,6 @@ let celsiusButton = document.querySelector("#celsius-button");
 let farenheitButton = document.querySelector("#farenheit-button");
 celsiusButton.addEventListener("click", celsius);
 farenheitButton.addEventListener("click", farenheit);
+
+// current on load
+window.onload = getPlace;
