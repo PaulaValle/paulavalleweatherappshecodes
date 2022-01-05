@@ -33,6 +33,30 @@ let months = [
 ];
 let month = months[now.getMonth()];
 dateMonth.innerHTML = `${date}, ${day}, ${hours}:${minutes}`;
+//* forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let daysWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  daysWeek.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2 weekdays">
+      <div class="weather-day">${day}</div>
+      <img
+      src="http://openweathermap.org/img/wn/50d@2x.png"
+      alt=""
+      width="50"/>
+      <div class="week-temperatures">
+        <span class="weektemp-min"> 5° </span>
+        <span class="weektemp-max"> 25° </span>
+      </div>
+    </div>`;
+    forecastHTML = forecastHTML + `</div>`;
+    forecastElement.innerHTML = forecastHTML;
+  });
+}
+displayForecast();
 //* search engine searchbar
 function temperatureChange(response) {
   celsiusTemperature = Math.round(response.data.main.temp);
