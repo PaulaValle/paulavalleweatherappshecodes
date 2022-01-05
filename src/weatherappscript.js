@@ -37,7 +37,7 @@ dateMonth.innerHTML = `${date}, ${day}, ${hours}:${minutes}`;
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  let daysWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  let daysWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   daysWeek.forEach(function (day) {
     forecastHTML =
       forecastHTML +
@@ -49,6 +49,7 @@ function displayForecast() {
       width="50"/>
       <div class="week-temperatures">
         <span class="weektemp-min"> 5° </span>
+        <span> / </span>
         <span class="weektemp-max"> 25° </span>
       </div>
     </div>`;

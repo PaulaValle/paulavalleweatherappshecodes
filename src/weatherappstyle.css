@@ -197,18 +197,16 @@ footer {
   font-weight: bold;
 }
 .weekdays {
-  display: inline-flex;
   color: #321891;
   background-color: #95d1cc;
   border: 1px solid #273f5a;
   box-shadow: 1px 2px 5px #daddfc;
   border-radius: 4px;
-  padding-left: 8px;
-  padding-bottom: 8px;
+  padding: 0 8px 3px 8px;
   text-align: center;
   margin-left: 0.6%;
   width: 13%;
-  margin-bottom: -5px;
+  margin: 0 1.5px -10px 1.7px;
   font-size: small;
 }
 .spacing {
