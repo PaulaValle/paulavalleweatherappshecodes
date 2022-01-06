@@ -42,20 +42,20 @@ function displayForecast() {
     forecastHTML =
       forecastHTML +
       `<div class="col-2 weekdays">
-      <div class="weather-day">${day}</div>
-      <img
-      src="http://openweathermap.org/img/wn/50d@2x.png"
-      alt=""
-      width="50"/>
-      <div class="week-temperatures">
-        <span class="weektemp-min"> 5° </span>
-        <span> / </span>
-        <span class="weektemp-max"> 25° </span>
-      </div>
-    </div>`;
-    forecastHTML = forecastHTML + `</div>`;
-    forecastElement.innerHTML = forecastHTML;
+        <div class="weather-day">${day}</div>
+        <img
+        src="http://openweathermap.org/img/wn/50d@2x.png"
+        alt=""
+        width="50"/>
+        <div class="week-temperatures">
+          <span class="weektemp-min"> 5° </span>
+          <span> / </span>
+          <span class="weektemp-max"> 25° </span>
+        </div>
+      </div>`;
   });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 displayForecast();
 //* search engine searchbar

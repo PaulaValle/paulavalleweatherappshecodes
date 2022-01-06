@@ -204,11 +204,16 @@ footer {
   border-radius: 4px;
   padding: 0 8px 3px 8px;
   text-align: center;
-  margin-left: 0.6%;
-  width: 13%;
-  margin: 0 1.5px -10px 1.7px;
+  width: 11%;
+  margin: 0 1.5px -10px 4.2px;
   font-size: small;
+  display: inline-block;
 }
+.row,
+.forecast {
+  width: 100%;
+}
+
 .spacing {
   margin-top: -20px;
 }
