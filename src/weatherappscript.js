@@ -138,39 +138,5 @@ function getPlace() {
 let currentButton = document.querySelector(".currentbutton");
 currentButton.addEventListener("click", getPlace);
 
-//Buttons, c y f
-let todayTemperature = document.querySelector("#today-temperature");
-let averageTemperature = document.querySelector("#average-temperature");
-function celsius(event) {
-  event.preventDefault();
-  todayTemperature.innerHTML = `${celsiusTemperature}º`;
-  averageTemperature.innerHTML = `${celsiusAverageMin}º / <strong>${celsiusAverageMax}º</strong>`;
-  farenheitButton.classList.remove("active");
-  celsiusButton.classList.add("active");
-}
-function farenheit(event) {
-  event.preventDefault();
-  let farenheitTemp = (celsiusTemperature * 9) / 5 + 32;
-  let farenheitTempAverageMin = (celsiusAverageMin * 9) / 5 + 32;
-  let farenheitTempAverageMax = (celsiusAverageMax * 9) / 5 + 32;
-  farenheitTemp = Math.round(farenheitTemp);
-  let farenheitTempToday = `${farenheitTemp}º`;
-  farenheitTempAverageMin = Math.round(farenheitTempAverageMin);
-  farenheitTempAverageMax = Math.round(farenheitTempAverageMax);
-  let farenheitTempAverage = `${farenheitTempAverageMin}º / <strong>${farenheitTempAverageMax}º</strong>`;
-  todayTemperature.innerHTML = farenheitTempToday;
-  averageTemperature.innerHTML = farenheitTempAverage;
-  celsiusButton.classList.remove("active");
-  farenheitButton.classList.add("active");
-}
-let celsiusTemperature = null;
-let celsiusAverageMin = null;
-let celsiusAverageMax = null;
-
-let celsiusButton = document.querySelector("#celsius-button");
-let farenheitButton = document.querySelector("#farenheit-button");
-celsiusButton.addEventListener("click", celsius);
-farenheitButton.addEventListener("click", farenheit);
-
 // current on load
 window.onload = getPlace;
