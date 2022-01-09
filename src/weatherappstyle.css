@@ -147,7 +147,7 @@ footer {
   text-align: center;
   width: 11%;
   margin: 0 1.5px -10px 4.2px;
-  font-size: small;
+  font-size: 12px;
   display: inline-block;
 }
 .row,
@@ -165,4 +165,11 @@ footer {
 #icon {
   width: 50px;
   margin: -10px 0;
+}
+.noData {
+  font-size: small;
+  font-family: "PT Mono", monospace;
+  text-align: center;
+  margin-top: 10px;
+  opacity: 0.6;
 }

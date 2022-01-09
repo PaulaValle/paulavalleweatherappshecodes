@@ -1,4 +1,6 @@
 let apiKey = "2f1b841a3b6dc609cb8924e01b3900c6";
+let todayTemperature = document.querySelector(".todaytemperature");
+let averageTemperature = document.querySelector(".averagetemperature");
 // new Date
 let otherInfo = document.querySelector("#second-grade-info");
 let dateMonth = document.querySelector("#date-month");
@@ -44,34 +46,40 @@ function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
-      forecastHTML =
-        forecastHTML +
-        `<div class="col-2 weekdays">
-        <div class="weather-day">${formatDate(forecastDay.dt)}</div>
-        <img
-        src="http://openweathermap.org/img/wn/${
-          forecastDay.weather[0].icon
-        }@2x.png"
-        alt=""
-        width="50"/>
-        <div class="week-temperatures">
-          <span class="weektemp-min"> ${Math.round(
-            forecastDay.temp.min
-          )}° </span>
-          <span> / </span>
-          <span class="weektemp-max"> ${Math.round(
-            forecastDay.temp.max
-          )}° </span>
-        </div>
-      </div>`;
-    }
-  });
+
+  if (forecast && forecast.length > 0) {
+    forecast.forEach(function (forecastDay, index) {
+      if (index < 7 && index > 0) {
+        forecastHTML =
+          forecastHTML +
+          `<div class="col-2 weekdays">
+          <div class="weather-day">${formatDate(forecastDay.dt)}</div>
+          <img
+          src="http://openweathermap.org/img/wn/${
+            forecastDay.weather[0].icon
+          }@2x.png"
+          alt=""
+          width="50"/>
+          <div class="week-temperatures">
+            <span class="weektemp-min"> ${Math.round(
+              forecastDay.temp.min
+            )}° </span>
+            <span> / </span>
+            <span class="weektemp-max"> ${Math.round(
+              forecastDay.temp.max
+            )}° </span>
+          </div>
+        </div>`;
+      }
+    });
+  } else {
+    forecastHTML =
+      forecastHTML +
+      `<div class="noData">We couldn't find the info, try again later.</div>`;
+  }
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-displayForecast();
 //* search engine searchbar
 function temperatureChange(response) {
   celsiusTemperature = Math.round(response.data.main.temp);
@@ -94,13 +102,17 @@ function temperatureChange(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   icon.setAttribute("alt", `${response.data.weather[0].main}`);
+  //info for the next api
+  let lon = response.data.coord.lon;
+  let lat = response.data.coord.lat;
+  let apiUrlCurrent3 = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrlCurrent3).then(displayForecast);
 }
 function cityChange(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-city-input");
   city.innerHTML = `${searchInput.value}`;
-  let unitMetric = "units=metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${apiKey}&${unitMetric}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(temperatureChange);
 }
 let city = document.querySelector("#city");
@@ -128,9 +140,10 @@ function show(response) {
 function currentPlace(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
-  let unitMetric = "units=metric";
-  let apiUrlCurrent = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&${unitMetric}`;
+  let apiUrlCurrent = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrlCurrent).then(show);
+  let apiUrlCurrent2 = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrlCurrent2).then(displayForecast);
 }
 function getPlace() {
   navigator.geolocation.getCurrentPosition(currentPlace);
